@@ -1,0 +1,44 @@
+/*
+SQLyog Ultimate v12.5.1 (64 bit)
+MySQL - 5.7.13-log : Database - paper
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`paper` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `paper`;
+
+/*Table structure for table `paper` */
+
+DROP TABLE IF EXISTS `paper`;
+
+CREATE TABLE `paper` (
+  `paper_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `number` int(11) DEFAULT NULL,
+  `detail` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`paper_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+/*Data for the table `paper` */
+
+insert  into `paper`(`paper_id`,`name`,`number`,`detail`) values
+(1,'小明论点',34,'说的地方股发行股份观复嘟嘟'),
+(2,'达尔文',32,'第三方的范德萨发放到是发送到发送到'),
+(3,'<速记论坛>',36,'梵蒂冈的更大的功夫高回报也同一人也好好干'),
+(6,'小胡论点',32,'发的发的方法电辅导辅导'),
+(7,'打狗论',76,'程序V型程序V型不吧VB宝贝VG打个电话过渡语优惠价 '),
+(8,'大猫论',12,'似懂非懂发生的股份官方图体育课没机会');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

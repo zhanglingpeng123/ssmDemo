@@ -23,6 +23,7 @@
           p:hostName="${redis.host}"
           p:port="${redis.port}"
           p:password=""
+          p:database="10"
           p:pool-config-ref="poolConfig"
           p:timeout="100000"/>
     <!-- Jedis模板配置  -->

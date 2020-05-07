@@ -27,6 +27,12 @@ public class PaperController {
 
         for(int i =0;i<list.size();i++){
             redisTemplate.opsForValue().set(list.get(i).getPaperName(),list.get(i).getPaperDetail());
+
+            redisTemplate.opsForList().rightPush("list" ,  list.get(i).getPaperName());
+
+            redisTemplate.opsForSet().add("setKey",list.get(i).getPaperDetail());
+
+            redisTemplate.opsForHash().put("outKey" ,  "inKey-" + i  ,  list.get(i).getPaperName() );
         }
         model.addAttribute("list", list);
         return "allPaper";
